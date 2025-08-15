@@ -15,7 +15,6 @@
 ## 🎖️ Badges e Redes:
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com)
 [![Instagram](https://img.shields.io/badge/-Instagram-pink?style=for-the-badge&logo=instagram)](https://instagram.com)
-[![Portfolio](https://img.shields.io/badge/-Portfólio-black?style=for-the-badge&logo=firefox)](#)
 
 ---
 
