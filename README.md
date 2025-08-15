@@ -18,11 +18,39 @@
 
 ---
 
-## 🐍 A cobrinha comendo meus commits:
+name: Generate Snake
 
-### 🌞 Tema Claro
-![Snake animation](https://github.com/traag/traag/blob/output/github-contribution-grid-snake.svg#gh-light-mode-only)
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
-### 🌙 Tema Escuro
-![Snake animation](https://github.com/traag/traag/blob/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Generate Snake - Light
+        uses: Platane/snk@v3
+        with:
+          github_user_name: traag
+          outputs: dist/github-contribution-grid-snake.svg
+
+      - name: Generate Snake - Dark
+        uses: Platane/snk@v3
+        with:
+          github_user_name: traag
+          outputs: dist/github-contribution-grid-snake-dark.svg
+          snake_color: "#00ff00"
+          background_color: "#000000"
+
+      - name: Push to Output Branch
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
