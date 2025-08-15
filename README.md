@@ -15,42 +15,17 @@
 ## 🎖️ Badges e Redes:
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com)
 [![Instagram](https://img.shields.io/badge/-Instagram-pink?style=for-the-badge&logo=instagram)](https://instagram.com)
+[![Portfolio](https://img.shields.io/badge/-Portfólio-black?style=for-the-badge&logo=firefox)](#)
 
 ---
 
-name: Generate Snake
+## 🐍 A cobrinha comendo meus commits:
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+### 🌞 Tema Claro
+![Snake animation](https://github.com/traag/traag/blob/output/github-contribution-grid-snake.svg#gh-light-mode-only)
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+### 🌙 Tema Escuro
+![Snake animation](https://github.com/traag/traag/blob/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
 
-      - name: Generate Snake - Light
-        uses: Platane/snk@v3
-        with:
-          github_user_name: traag
-          outputs: dist/github-contribution-grid-snake.svg
-
-      - name: Generate Snake - Dark
-        uses: Platane/snk@v3
-        with:
-          github_user_name: traag
-          outputs: dist/github-contribution-grid-snake-dark.svg
-          snake_color: "#00ff00"
-          background_color: "#000000"
-
-      - name: Push to Output Branch
-        uses: crazy-max/ghaction-github-pages@v3
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+---
 
