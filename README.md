@@ -26,5 +26,3 @@
 ### 🌙 Tema Escuro
 ![Snake animation](https://github.com/traag/traag/blob/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only)
 
----
-💡 *README gerado com carinho para deixar o perfil mais estiloso!*
